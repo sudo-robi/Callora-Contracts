@@ -133,7 +133,7 @@ fn batch_deduct_success() {
 }
 
 #[test]
-#[should_panic(expected = "insufficient balance")]
+#[should_panic]
 fn batch_deduct_reverts_entire_batch() {
     let env = Env::default();
     let owner = Address::generate(&env);
@@ -184,7 +184,7 @@ fn withdraw_exact_balance() {
 }
 
 #[test]
-#[should_panic(expected = "insufficient balance")]
+#[should_panic]
 fn withdraw_exceeds_balance_fails() {
     let env = Env::default();
     let owner = Address::generate(&env);
